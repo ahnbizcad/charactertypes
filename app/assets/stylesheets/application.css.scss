@@ -89,12 +89,14 @@ h6 {font-size: 1.1em;}
 
 a {
 	text-decoration: none;
-	color: #DA2;
+	color: #26D;
 }
 a:hover {
-		color: green;
+		color: #D71;
 }
-
+td {
+	padding: 0.1em 0.25em;
+}
 
 
 /*  */
@@ -146,6 +148,12 @@ nav {
 			padding: 0.25em;
 		}
 	}
+	a {
+		color: #ED1;
+	}
+	a:hover {
+		color: #E81;
+	}
 }
 
 #login-area {
@@ -168,12 +176,14 @@ main {
 
 	@include border-box;
 
+	padding: 0.5em;
+
 	min-width: 30em;
 	min-height: 50em;
 	max-height: 200em;
 
 
-	background-color: #FDD;
+	
 	/*background-image: url(<%= asset_path 'mvc_diagram.png' %>) }
 	*/
 }
@@ -267,7 +277,7 @@ main {
 	@include border-box();
 	background-color: #EEE;
 	padding: 0.5em;
-	margin: 0.5em;
+	margin: 0em 0em 0.5em;
 }
 
 .character-main {
