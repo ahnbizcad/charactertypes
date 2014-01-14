@@ -1,0 +1,48 @@
+<h1>Listing personalities</h1>
+
+<%= link_to 'New Personality', new_personality_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Socionics Type</th>
+      <th>MBTI Type</th>
+      <th>Socionics Label</th>
+      <th>Quadra</th>
+      <th>CF1-1</th>
+      <th>CF2-2</th>
+      <th>CF3-6</th>
+      <th>CF4-5</th>
+      <th>CF5-7</th>
+      <th>CF6-8</th>
+      <th>CF7-4</th>
+      <th>CF8-3</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @personalities.each do |personality| %>
+      <tr>
+        <td><%= personality.stype %></td>
+        <td><%= personality.mtype %></td>
+        <td><%= personality.slabel %></td>
+        <td><%= personality.quadra %></td>
+        <td><%= personality.cf1 %></td>
+        <td><%= personality.cf2 %></td>
+        <td><%= personality.cf3 %></td>
+        <td><%= personality.cf4 %></td>
+        <td><%= personality.cf5 %></td>
+        <td><%= personality.cf6 %></td>
+        <td><%= personality.cf7 %></td>
+        <td><%= personality.cf8 %></td>
+        <td><%= link_to 'Show', personality %></td>
+        <td><%= link_to 'Edit', edit_personality_path(personality) %></td>
+        <td><%= link_to 'Destroy', personality, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

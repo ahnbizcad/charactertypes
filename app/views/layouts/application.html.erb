@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Charactertypes</title>
+<html lang="en">
+<head>  
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+	<script src="dist/html5shiv.js"></script>
+	<![endif]-->
+	<title>Character Types</title>
 </head>
 <body>
 
-<%= yield %>
+<header class="top-bot-color">
+	<%= render :partial => 'layouts/header' %>
+	<%= render :partial => 'layouts/navmenu' %>
+</header>
+
+<div id="body-wrapper">
+	<%= render :partial => 'layouts/sidebar_one' %><main>
+	<%= yield %>
+	</main><%= render :partial => 'layouts/sidebar_two' %>
+</div>
+
+<footer class="top-bot-color">
+	<%= render :partial => 'layouts/footer' %>
+</footer>
 
 </body>
 </html>

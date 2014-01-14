@@ -1,0 +1,154 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 20px;
+  font-family: Helvetica, 'klavika-web', 'Chelsea-market'; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.8em; }
+
+h3 {
+  font-size: 1.6em; }
+
+h4 {
+  font-size: 1.4em; }
+
+h5 {
+  font-size: 1.2em; }
+
+h6 {
+  font-size: 1.1em; }
+
+a {
+  text-decoration: none;
+  color: #DA2; }
+
+a:hover {
+  color: green; }
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+.test-outline {
+  outline: 1px solid blue; }
+
+.width-wrapper {
+  width: 60em;
+  margin: 0em auto; }
+
+.top-bot-color {
+  background-color: #000;
+  color: #FFF; }
+
+header {
+  display: inline-block;
+  width: 100%; }
+
+footer {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  min-height: 4em; }
+
+.navmenu {
+  width: 100%;
+  border: 1px solid black;
+  text-transform: uppercase; }
+  .navmenu ul {
+    display: inline-block; }
+    .navmenu ul li {
+      display: inline-block;
+      padding: 0.25em; }
+
+.move-right {
+  float: right; }
+
+.body-wrapper {
+  display: flex;
+  margin: 2em 0em 0em 0em auto;
+  white-space: nowrap; }
+
+main {
+  display: inline-block;
+  min-width: 36em;
+  border: 1px solid black;
+  padding: 0.5em;
+  background-color: #FDD;
+  /*background-image: url(<%= asset_path 'mvc_diagram.png' %>) }
+  */ }
+
+.sidebar {
+  display: inline-block;
+  vertical-align: top;
+  width: 10em;
+  min-height: 50em;
+  white-space: nowrap;
+  background-color: #FFF; }
+
+.filmstrip-left {
+  display: inline-block;
+  width: 40px;
+  background-image: url(/assets/film_sprite_left.png);
+  background-repeat: repeat; }
+
+.filmstrip-right {
+  display: inline-block;
+  width: 40px;
+  background-image: url("../images/film_sprite_right.png");
+  background-repeat: repeat; }
+
+.filmstrip-center {
+  display: inline-block; }
+
+.filmstrip-divider {
+  display: block;
+  width: 100%;
+  height: 0.5em;
+  background-color: #000; }
+
+.sidebar-module {
+  display: block;
+  width: 100%; }
+
+.sidebar-module-item {
+  display: block;
+  width: 100%; }

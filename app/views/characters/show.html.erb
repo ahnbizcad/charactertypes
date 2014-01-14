@@ -1,0 +1,26 @@
+<div class="character-main">
+	<h1 style="display:inline;"><%= @character.name %></h1>
+	<%= link_to "Edit", edit_character_path %>
+	from
+	<%= link_to @character.show.title, show_path(@character.show) %>
+	<br />
+	<br />
+	<%= link_to "List of Characters", characters_path %><br />
+</div>
+
+<div>
+</div>
+
+<div class="comments">
+<h3>Comments</h3>
+<% @character.comments.each do |com| %>
+	<div>
+	<%= com.user.name %>
+	<%= com.text %>
+	</div>
+<% end %>
+</div>
+
+<br />
+<br />
+

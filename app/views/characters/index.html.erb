@@ -1,0 +1,30 @@
+<h1>List of Characters</h1>
+
+<div>sort by:
+<ul>
+	<li>updated</li>
+	<li>name</li>
+	<li>show</li>
+</ul>toggle reverse for each</div>
+
+<div>search</div>
+
+<table>
+	<tr>
+    <th>Character</th>
+    <th>Show</th>
+  </tr>
+
+	<% @characters.each do |character| %>
+		<tr>
+			<td><%= link_to character.name, character %></td>
+			<td><%= link_to character.show.title, character.show %></td>
+	  	<td><%= link_to 'Edit', edit_character_path(character) %></td>
+	  	<td><%= link_to 'Destroy', character_path(character), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+	<% end %>
+</table>
+<br />
+<%= link_to "Add a Character", new_character_path %><br />
+<br />
+<%= link_to "List of Shows", shows_path %>

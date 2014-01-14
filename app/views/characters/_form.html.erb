@@ -1,0 +1,27 @@
+<%= form_for(@character) do |f|%>
+	<% if @character.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@character.errors.count, "error") %> prohibited this character from being saved:</h2>
+      <ul>
+      <% @character.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br />
+  <% if @show.nil? %>
+    <%= f.label :show_id %>
+    <%= f.select :show_id, @shows.collect{ |show| [show.title, show.id] }, {prompt: 'Select a show'} %>
+  <% else %>
+    <%= f.label :show_id %>
+    <%= f.select :show_id, @shows.collect{ |show| [show.title, show.id] }, :selected => params[:show_id] %>
+  <% end %>
+	<br />
+	<div class="actions">
+  <%= f.submit %>
+  </div>
+<% end %>

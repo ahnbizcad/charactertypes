@@ -1,0 +1,43 @@
+<%= form_for(@personality) do |f| %>
+
+  <% if @personality.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@personality.errors.count, "error") %> prohibited this personality from being saved:</h2>
+
+      <ul>
+      <% @personality.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :stype %>
+  <%= f.text_field :stype %><br />
+  <%= f.label :mtype %>
+  <%= f.text_field :mtype %><br />
+  <%= f.label :slabel %>
+  <%= f.text_field :slabel %><br />
+  <%= f.label :quadra %>
+  <%= f.text_field :quadra %><br />
+  <%= f.label :cf1 %>
+  <%= f.text_field :cf1 %><br />
+  <%= f.label :cf2 %>
+  <%= f.text_field :cf2 %><br />
+  <%= f.label :cf3 %>
+  <%= f.text_field :cf3 %><br />
+  <%= f.label :cf4 %>
+  <%= f.text_field :cf4 %><br />
+  <%= f.label :cf5 %>
+  <%= f.text_field :cf5 %><br />
+  <%= f.label :cf6 %>
+  <%= f.text_field :cf6 %><br />
+  <%= f.label :cf7 %>
+  <%= f.text_field :cf7 %><br />
+  <%= f.label :cf8 %>
+  <%= f.text_field :cf8 %><br />
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

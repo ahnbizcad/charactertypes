@@ -1,0 +1,3 @@
+//grabs height of one element, and applies it to another.
+//var tweetheight = $("#tweet-area").height();
+//$("#sidebar-wrapper").css({ bottom: tweetheight});

@@ -1,5 +1,17 @@
 source 'https://rubygems.org'
 
+# For testing
+# in development environment so rake tasks run proplyerly.
+#gem 'rspec', group => [:test, :development]
+## automatically running specs after saving file
+#gem 'guard-rspec'
+## Instead of fixtures
+#gem 'factory_girl_rails'
+## simulating hte user
+#gem 'cabybara'
+
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 

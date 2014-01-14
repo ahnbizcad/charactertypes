@@ -1,0 +1,279 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+
+/*  */
+/* TOOLS FOR TESTING */
+/*  */
+
+/* outline to see dimensions of elements */
+@mixin test-outline {
+	outline:1px solid blue;
+}
+
+
+
+/*  */
+/* VARIABLES */
+/*  */
+
+$page-width: 60em;
+$sidebar-width: 10em;
+
+$column-height: 50em;
+
+
+/*  */
+/* MIXIN MODULES */
+/*  */
+
+/* Apply page width to elements */
+@mixin page-width {
+	width: $page-width;
+}
+/* Horizontally center elements */
+@mixin horizontal-center {
+		margin: 0em auto;
+}
+@mixin vertical-center {
+		verticl-align: center;
+}
+
+/* make as border-box for specified width and height for padding and border */
+@mixin border-box {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+}
+@mixin box-shadow($value) {
+	-webkit-box-shadow: $value;
+	-moz-box-shadow: $value;
+	-o-box-shadow: $value;
+	box-shadow: $value;
+}
+
+
+/*  */
+/* GLOBAL FORMATS */
+/*  */
+
+html {
+	font-size: 20px;
+	font-family: Helvetica, 'klavika-web', 'Chelsea-market';
+}
+
+h1 {font-size: 2em;}
+h2 {font-size: 1.8em;}
+h3 {font-size: 1.6em;}
+h4 {font-size: 1.4em;}
+h5 {font-size: 1.2em;}
+h6 {font-size: 1.1em;}
+
+a {
+	text-decoration: none;
+	color: #DA2;
+}
+a:hover {
+		color: green;
+}
+
+
+
+/*  */
+/* CSS */
+/*  */
+
+.top-bot-color {
+	background-color: #000;
+	color: #FFF;
+}
+
+footer {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+
+	min-height: 4em;
+}
+#footer-shrink {
+	@include page-width;
+	@include horizontal-center;
+}
+header {
+	display: inline-block;
+
+	@include horizontal-center;
+
+	width: 100%;
+}
+#header-wrapper {
+	display: block;
+
+	@include page-width;
+	@include horizontal-center;
+}
+
+nav {
+	display: block;
+
+	@include page-width;
+	@include horizontal-center;
+
+	text-transform: uppercase;
+	background-color: #000;
+	ul {
+		display: inline-block;
+		li {
+			display: inline-block;
+			padding: 0.25em;
+		}
+	}
+}
+
+#login-area {
+	float:right;
+}
+
+#body-wrapper { 
+	display: table;
+
+	@include horizontal-center;
+	margin: 2em 0em 0em 0em auto;
+
+	@include page-width;
+
+	@include box-shadow(0em 0em 0.5em 0.25em #000)
+}
+
+main {
+	display: table-cell;
+
+	@include border-box;
+
+	min-width: 30em;
+	min-height: 50em;
+	max-height: 200em;
+
+
+	background-color: #FDD;
+	/*background-image: url(<%= asset_path 'mvc_diagram.png' %>) }
+	*/
+}
+
+
+
+.sidebar {
+	display: table-cell;
+	vertical-align: top;
+
+	min-height: $column-height;
+
+	width: $sidebar-width;
+	background-color: #FFF;
+}
+.sidebar-one {	
+	
+}
+.sidebar-two {
+	
+}
+
+
+.filmstrip-left {
+	display: inline-block;
+
+	width:2em;
+	height: $column-height;
+
+	background-image: url("film_sprite_left.png");
+	background-repeat:repeat;
+}
+.filmstrip-right {
+	display: inline-block;
+
+	width: 2em;
+	height: $column-height;
+
+	background-image: url("film_sprite_right.png");
+	background-repeat:repeat;
+}
+.filmstrip-center {
+	display: inline-block;
+	vertical-align: top;
+
+	width: $page-width*0.10;
+
+	background-color: #CCC;
+}
+.filmstrip-divider {
+	display: block;
+
+	width:100%;
+	height:0.5em;
+
+	background-color:#000;
+}
+.sidebar-module {
+	display: block;
+
+	width:100%;
+}
+.module-head {
+	display: block;
+
+	text-align: center;
+
+	@include border-box;
+	padding: 0.1em;
+
+	width:100%;
+
+	color: #359;
+	background-color: #ACF;
+}
+.module-item {
+	display: block;
+
+	@include border-box;
+	padding: 0.1em;
+
+	width:100%;
+}
+
+
+/*  */
+/* Main View */
+/*  */
+@mixin main-element{
+	@include box-shadow(0em 0em 0.5em 0em #000);
+	@include border-box();
+	background-color: #EEE;
+	padding: 0.5em;
+	margin: 0.5em;
+}
+
+.character-main {
+	@include main-element;
+}
+
+.comments {
+	@include main-element;	
+}
