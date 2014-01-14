@@ -1,0 +1,2 @@
+mycharactertypes
+================
